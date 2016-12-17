@@ -1,0 +1,4 @@
+This file is for upload test.
+using command: put uploadTestFile.txt
+to upload this file to server.
+

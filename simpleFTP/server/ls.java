@@ -26,16 +26,18 @@ public class ls extends ServerCmd {
         try {
             sendData = new DataOutputStream(s.getOutputStream());
             File file = new File(path);
+            String data = "";
             if (file.isDirectory()) {
                 File[] files = file.listFiles();
                 for (int i = 0; i < files.length; i++) {
-                    str += files[i].getName() + "\n";
+                    data += files[i].getName() + "\n";
                 }
-                // System.out.println(str);
             }
-            sendData.writeUTF(str+"200 command complete!");
+            sendData.writeUTF(data);
+            str += "200 command complete!";
         } catch (IOException e) {
             e.printStackTrace();
+            str += "500 command fail!";
         }
         return str;
     }

@@ -34,7 +34,6 @@ public class close extends ServerCmd {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // System.out.println(str);
         return str;
     }
 }
