@@ -5,7 +5,7 @@
  > Created Time: Sat 17 Dec 2016 05:21:37 PM CST
  ************************************************************************/
 
-package FTPServer;
+package server;
 
 import java.io.*;
 import java.net.Socket;

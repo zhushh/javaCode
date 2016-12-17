@@ -5,7 +5,7 @@
  > Created Time: Fri 16 Dec 2016 11:28:53 PM CST
  *************************************************************************/
 
-package FTPClient;
+package client;
 
 import java.io.IOException;
 import java.net.*;
@@ -37,7 +37,7 @@ public class ClientThread extends Thread {
                 String temp = i.nextLine();
                 String[] cmd = temp.split(" ");
                 try {
-                    ClientCmd cm = (ClientCmd)Class.forName("FTPClient."+cmd[0]).newInstance();
+                    ClientCmd cm = (ClientCmd)Class.forName("client."+cmd[0]).newInstance();
                     String str = cm.func(connectToServer, cmd);
                     System.out.println(str);
                 } catch (InstantiationException e) {

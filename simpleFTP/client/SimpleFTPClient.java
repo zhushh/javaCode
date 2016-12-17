@@ -5,7 +5,7 @@
  > Created Time: Fri 16 Dec 2016 11:40:50 PM CST
  ************************************************************************/
 
-package FTPClient;
+package client;
 
 import java.net.*;
 import java.util.Scanner;
